@@ -23,6 +23,40 @@ MAP
 👁️ Visual Enhancement: Improved readability and immediate understanding of geographic salary trends.
 💡 Insights Gained: Enables quick grasp of global salary disparities and highlights high/low salary regions.
 
+ 
+ Formulas and Functions 
+ 
+💰 Median Salary by Job Titles
+=MEDIAN(
+IF(
+    (jobs[job_title_short]=A2)*
+    (jobs[job_country]=country)*
+    (ISNUMBER(SEARCH(type,jobs[job_schedule_type])))*
+    (jobs[salary_year_avg]<>0),
+    jobs[salary_year_avg]
+)
+)
+
+🔍 Multi-Criteria Filtering: Checks job title, country, schedule type, and excludes blank salaries.
+
+📊 Array Formula: Utilizes MEDIAN() function with nested IF() statement to analyze an array.
+
+🎯 Tailored Insights: Provides specific salary information for job titles, regions, and schedule types
+
+🔢 Formula Purpose: This formula populates the table below, returning the median salary based on job title, country, and type specified.
+
+
+Count of Job Schedule Type
+
+
+=FILTER(J2#,(NOT(ISNUMBER(SEARCH("and",J2#))+ISNUMBER(SEARCH(",",J2#))))*(J2#<>0))
+
+🔍 Unique List Generation: This Excel formula below employs the FILTER() function to exclude entries containing "and" or commas, and omit zero values.
+
+🔢 Formula Purpose: This formula populates the table below, which gives us a list of unique job schedule types.
+
+
+
  Data Validation
 
 🔍 Filtered List
