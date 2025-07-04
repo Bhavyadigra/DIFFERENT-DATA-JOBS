@@ -59,6 +59,11 @@ Count of Job Schedule Type
 
  Data Validation
 
+![1_Salary_Dashboard_Final_Dashboard](https://github.com/user-attachments/assets/2194e840-82a3-4e3d-acdf-fbf7f1b2000e)
+
+
+ 
+
 🔍 Filtered List
 🔒 Enhanced Data Validation: Implementing the filtered list as a data validation rule under the Job Title, Country, and Type option in the Data tab ensures:
 🎯 User input is restricted to predefined, validated schedule types
